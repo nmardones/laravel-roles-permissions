@@ -1977,17 +1977,17 @@
     },
     {
         "name": "phpunit/phpunit",
-        "version": "7.0.1",
-        "version_normalized": "7.0.1.0",
+        "version": "7.0.2",
+        "version_normalized": "7.0.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/phpunit.git",
-            "reference": "316555dbd0ed4097bbdd17c65ab416bf27a472e9"
+            "reference": "e2f8aa21bc54b6ba218bdd4f9e0dac1e9bc3b4e9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/316555dbd0ed4097bbdd17c65ab416bf27a472e9",
-            "reference": "316555dbd0ed4097bbdd17c65ab416bf27a472e9",
+            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e2f8aa21bc54b6ba218bdd4f9e0dac1e9bc3b4e9",
+            "reference": "e2f8aa21bc54b6ba218bdd4f9e0dac1e9bc3b4e9",
             "shasum": ""
         },
         "require": {
@@ -2022,7 +2022,7 @@
             "ext-xdebug": "*",
             "phpunit/php-invoker": "^2.0"
         },
-        "time": "2018-02-13T06:08:08+00:00",
+        "time": "2018-02-26T07:03:12+00:00",
         "bin": [
             "phpunit"
         ],
@@ -4133,6 +4133,76 @@
             "assert",
             "check",
             "validate"
+        ]
+    },
+    {
+        "name": "zizaco/entrust",
+        "version": "5.2.x-dev",
+        "version_normalized": "5.2.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Zizaco/entrust.git",
+            "reference": "3623cc052937d9e62543402b50f24065720d44b9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Zizaco/entrust/zipball/3623cc052937d9e62543402b50f24065720d44b9",
+            "reference": "3623cc052937d9e62543402b50f24065720d44b9",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/cache": "~5.0",
+            "illuminate/console": "~5.0",
+            "illuminate/support": "~5.0",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "illuminate/database": "~5.0",
+            "mockery/mockery": "dev-master",
+            "phpunit/phpunit": "~4.1",
+            "sami/sami": "dev-master"
+        },
+        "time": "2016-12-29T06:25:06+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/commands"
+            ],
+            "psr-4": {
+                "Zizaco\\Entrust\\": "src/Entrust/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andrew Elkins",
+                "homepage": "http://andrewelkins.com"
+            },
+            {
+                "name": "Zizaco Zizuini",
+                "email": "zizaco@gmail.com"
+            },
+            {
+                "name": "Ben Batschelet",
+                "homepage": "http://github.com/bbatsche"
+            },
+            {
+                "name": "Michele Angioni",
+                "email": "michele.angioni@gmail.com"
+            }
+        ],
+        "description": "This package provides a flexible way to add Role-based Permissions to Laravel",
+        "keywords": [
+            "acl",
+            "auth",
+            "illuminate",
+            "laravel",
+            "permission",
+            "roles"
         ]
     }
 ]

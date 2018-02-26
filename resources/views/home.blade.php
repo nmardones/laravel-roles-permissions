@@ -13,8 +13,24 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <table class="table table-borderer" id="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            @foreach($users as $user)
+                                <td></td>
+                                <td>{{ $user->name }}</td>
+                                <td> {{ $user->email }}</td>
+                            @endforeach
+                        </tr>
+                    </tbody>
+                    </table>
                 </div>
             </div>
         </div>

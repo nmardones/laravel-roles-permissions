@@ -12,7 +12,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link href="{{ asset('bootstrap-3.2.0/css/bootstrap.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -68,7 +69,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="{{asset('bootstrap-3.2.0/js/bootstrap.js')}}"></script>
     <script>
         $(document).ready(function(){
             $('#table').DataTable();

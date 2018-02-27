@@ -17,7 +17,7 @@ class UserController extends Controller {
         try{
             $users = User::all();
             $roles = Role::all();
-            return view('home',compact('users','roles'));
+            return view('users.index',compact('users','roles'));
         } catch (Exception $ex) {
             return redirect('users')->with('errors', $ex->getMessage());
         }
@@ -54,18 +54,8 @@ class UserController extends Controller {
             $user->name   = $request->get('name');
             $user->email  = $request->get('email');
             $user->password = bcrypt($request->get('password'));
-            $user->edad = $request->get('edad');
             $roles = $request->get('role');
-            $favoritosId = $request->get('favoritos');
-            if($user->save()){
-                $userId = User::all();
-                $last = $userId->last();
-                $lastId = $last['id'];
-                foreach ($favoritosId as $data){
-                    $sql = "insert into favoritos values('$data','$lastId')";
-                    DB::select($sql);
-                }
-            }
+            $user->save();
             if ($roles) {
                 $user->attachRoles($roles);
             }
@@ -92,9 +82,8 @@ class UserController extends Controller {
             $user = User::find($decode);
             $roles = Role::all();
             $rolUser = $users->getRolById($decode);
-            $favoritosUser =$users->getFavoritosById($decode);
             $formAction = action('UserController@update', $id);
-            return view("users/form", compact('user','allUser','formAction','roles','rolUser','favoritosUser'));
+            return view("users/form", compact('user','allUser','formAction','roles','rolUser'));
         }catch (Exception $ex) {
             return redirect('users')->with('errors', $ex->getMessage());
         }
@@ -115,15 +104,7 @@ class UserController extends Controller {
             $users->name    = $request->get('name');
             $users->email	= $request->get('email');
             $users->detachRoles($users->roles);
-            $favoritosId = $request->get('favoritos');
-            if($users->save()){
-                $sql = "DELETE FROM favoritos WHERE user_admin_id=".$decode;
-                DB::select($sql);
-                foreach ($favoritosId as $data){
-                    $sql = "insert into favoritos values('$data','$decode')";
-                    DB::select($sql);
-                }
-            }
+            $users->save();
             $roles = $request->get('role');
             if ($roles) {
                 $users->attachRoles($roles);

@@ -36,5 +36,14 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Role','role_user','user_id','role_id');
     }
 
-
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getRolById($id)
+    {
+        $sql = "SELECT role_id FROM role_user WHERE user_id=". $id;
+        $rolUser = DB::select($sql);
+        return $rolUser;
+    }
 }

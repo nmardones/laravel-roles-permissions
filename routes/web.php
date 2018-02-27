@@ -23,7 +23,7 @@ Route::resource('/home','UserController');
 
 /* Users */
 Route::resource('users', 'UserController');
-Route::get('destroy/{id}', 'UserController@destroy');
+Route::get('users/destroy/{id}', 'UserController@destroy');
 Route::post('users/{id}/update', 'UserController@update');
 
 

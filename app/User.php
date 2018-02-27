@@ -4,10 +4,15 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
+use Auth;
+use DB;
+
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use EntrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -26,4 +31,19 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function roles(){
+        return $this->belongsToMany('App\Role','role_user','user_id','role_id');
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getRolById($id)
+    {
+        $sql = "SELECT role_id FROM role_user WHERE user_id=". $id;
+        $rolUser = DB::select($sql);
+        return $rolUser;
+    }
 }

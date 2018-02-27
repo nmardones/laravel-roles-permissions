@@ -27,7 +27,7 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div style="padding-bottom: 10px;text-align: right">
-                                        <a href="{{url('roles/create')}}" class="btn btn-primary btn-xs" id="crear-usuario"><i class="glyphicon glyphicon-plus"></i></a>
+                                        <a href="{{url('permissions/create')}}" class="btn btn-primary btn-xs" id="crear-usuario"><i class="glyphicon glyphicon-plus"></i></a>
                                     </div>
                                     <table class="table table-striped table-bordered table-hover">
 

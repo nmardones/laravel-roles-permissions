@@ -15,12 +15,9 @@ class UserController extends Controller {
     public function index(Request $request)
     {
         try{
-            //$nombre = $request->get("nombre");
-            $users = User::all();//nombre($nombre)->orderBy('id', 'ASC')->paginate(5);
+            $users = User::all();
             $roles = Role::all();
-            $sql ="select * from favoritos";
-            $favoritos = DB::select($sql);
-            return view('users.index',compact('users','roles','favoritos'));
+            return view('home',compact('users','roles'));
         } catch (Exception $ex) {
             return redirect('users')->with('errors', $ex->getMessage());
         }

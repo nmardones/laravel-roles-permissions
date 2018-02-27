@@ -13,22 +13,27 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <h1>Usuarios</h1>
                     <table class="table table-borderer" id="table">
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Nombre</th>
                             <th>email</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($users as $user)
                         <tr>
-                            @foreach($users as $user)
-                                <td></td>
-                                <td>{{ $user->name }}</td>
-                                <td> {{ $user->email }}</td>
-                            @endforeach
+                            <td></td>
+                            <td>{{ $user->name }}</td>
+                            <td> {{ $user->email }}</td>
+                            <td></td>
+                            <td></td>
                         </tr>
+                    @endforeach
                     </tbody>
                     </table>
                 </div>

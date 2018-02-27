@@ -21,7 +21,7 @@ class PermissionsController extends Controller
             $permissions = Permission::all();
             return view('permissions.index',compact('permissions'));
         } catch (Exception $ex) {
-            return redirect('admin/permissions')->with('errors', $ex->getMessage());
+            return redirect('permissions')->with('errors', $ex->getMessage());
         }
     }
 
@@ -37,7 +37,7 @@ class PermissionsController extends Controller
             $formAction = action('PermissionsController@store');
             return view("permissions.form", compact('permissions', 'formAction'));
         } catch (Exception $ex) {
-            return redirect('admin/permissions')->with('errors', $ex->getMessage());
+            return redirect('permissions')->with('errors', $ex->getMessage());
         }
     }
 
@@ -47,13 +47,13 @@ class PermissionsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PermissionRequest $request)
+    public function store(Request $request)
     {
         try {
             $this->saveData();
-            return redirect("admin/permissions")->with('success', 'Registro guardado correctamente');
+            return redirect("permissions")->with('success', 'Registro guardado correctamente');
         } catch (Exception $ex) {
-            return redirect('admin/permissions')->with('errors', $ex->getMessage());
+            return redirect('permissions')->with('errors', $ex->getMessage());
         }
     }
 
@@ -82,7 +82,7 @@ class PermissionsController extends Controller
             $formAction = action('PermissionsController@update', $id);
             return view("permissions/form", compact('permissions', 'formAction'));
         } catch (Exception $ex) {
-            return redirect('admin/permissions')->with('errors', $ex->getMessage());
+            return redirect('permissions')->with('errors', $ex->getMessage());
         }
     }
 
@@ -93,14 +93,14 @@ class PermissionsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(PermissionRequest $request, $id)
+    public function update(Request $request, $id)
     {
         try {
             $decode = Hashids::decode($id)[0];
             $this->saveData($decode);
-            return redirect("admin/permissions")->with('success', 'Registro guardado correctamente');
+            return redirect("permissions")->with('success', 'Registro guardado correctamente');
         } catch (Exception $ex) {
-            return redirect('admin/permissions')->with('errors', $ex->getMessage());
+            return redirect('permissions')->with('errors', $ex->getMessage());
         }
     }
 
@@ -116,9 +116,9 @@ class PermissionsController extends Controller
             $decode = Hashids::decode($id)[0];
             $permissions = Permission::findOrFail($decode);
             $permissions->delete();
-            return redirect("admin/permissions")->with('success', 'Registro borrado correctamente');
+            return redirect("permissions")->with('success', 'Registro borrado correctamente');
         } catch (Exception $ex) {
-            return redirect('admin/permissions')->with('errors', $ex->getMessage());
+            return redirect('permissions')->with('errors', $ex->getMessage());
         }
     }
 
@@ -131,7 +131,7 @@ class PermissionsController extends Controller
             $permissions->description = Request::get('description');
             $permissions->save();
         } catch (Exception $ex) {
-            return redirect('admin/permissions')->with('errors', $ex->getMessage());
+            return redirect('permissions')->with('errors', $ex->getMessage());
         }
     }
 }

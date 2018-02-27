@@ -32,7 +32,7 @@
                             <!-- Menú de Administración-->
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    Administración <span class="caret"></span>
+                                    Mantenedores <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -43,7 +43,7 @@
                                         <a href="{{ url('/roles') }}">Roles</a>
                                     </li>
                                     <li>
-                                        <a href="{{ url('/pagos') }}">Pagos</a>
+                                        <a href="{{ url('/permissions') }}">Permisos</a>
                                     </li>
                                 </ul>
                             </li>

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5179ff25e97290405efcfbf8e88807bb935a9018
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
@@ -10,17 +14,30 @@
 # laravel-roles-permissions
 Base Laravel, Roles and permissions to implement in any project.
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5179ff25e97290405efcfbf8e88807bb935a9018
 >* *Entrust is a succinct and flexible way to add Role-based Permissions to Laravel 5.* [entrust](https://github.com/Zizaco/entrust).
 
 ## Install
 > *Download repository git*
 
+<<<<<<< HEAD
+`https://github.com/nmardones/laravel-roles-permissions.git`
+
+> *or in this way*
+
+* `git init`
+* `git remote add origin https://github.com/nmardones/laravel-roles-permissions.git`
+=======
 `git clone https://gitlab.com/nmardones/base-laravel.git`
 
 > *Or this way*
 
 * `git init`
 * `git remote add origin https://gitlab.com/nmardones/base-laravel.git`
+>>>>>>> 5179ff25e97290405efcfbf8e88807bb935a9018
 
 * `git pull origin develop`
 
@@ -39,17 +56,29 @@ CACHE_DRIVER=array
 ```
 
 
+<<<<<<< HEAD
+> *For artisan*
+=======
 > *With artisan*
+>>>>>>> 5179ff25e97290405efcfbf8e88807bb935a9018
 
 ```[php]
 php artisan migrate
 php artisan db:seed
 ```
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5179ff25e97290405efcfbf8e88807bb935a9018
 ## Login
 >*  `user: administrador@gmail.com`     
 >*  `password: 123456`
 
+<<<<<<< HEAD
+>*Enjoy!!! ;)*
+
+>*@nmardones*
+=======
 
 
 > *Enjoy!!! ;)*
@@ -58,3 +87,4 @@ php artisan db:seed
 
 > *@nmardones*
 
+>>>>>>> 5179ff25e97290405efcfbf8e88807bb935a9018

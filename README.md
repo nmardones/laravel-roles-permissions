@@ -1,12 +1,5 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Versi$
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
 # laravel-roles-permissions
 Base Laravel, Roles and permissions to implement in any project.
 
@@ -19,16 +12,16 @@ Base Laravel, Roles and permissions to implement in any project.
 
 > *or in this way*
 
-* `git init`
-* `git remote add origin https://github.com/nmardones/laravel-roles-permissions.git`
-`git clone https://gitlab.com/nmardones/base-laravel.git`
+* `$ git init`
+* `$ git remote add origin https://github.com/nmardones/laravel-roles-permissions.git`
+`$ git clone https://gitlab.com/nmardones/base-laravel.git`
 
 > *Or this way*
 
-* `git init`
-* `git remote add origin https://gitlab.com/nmardones/base-laravel.git`
+* `$ git init`
+* `$ git remote add origin https://gitlab.com/nmardones/base-laravel.git`
 
-* `git pull origin develop`
+* `$ git pull origin develop`
 
 > *Configuration .env*
 
@@ -48,14 +41,14 @@ CACHE_DRIVER=array
 > *With artisan*
 
 ```[php]
-php artisan migrate
-php artisan db:seed
+$ php artisan migrate
+$ php artisan db:seed
 ```
 ## Login
 >*  `user: administrador@gmail.com`     
 >*  `password: 123456`
 
-
+![roles](public/img/roles.png)
 
 > *Enjoy!!! ;)*
 
